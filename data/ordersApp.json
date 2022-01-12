@@ -1,0 +1,752 @@
+{
+  "luis_schema_version": "7.0.0",
+  "intents": [
+    {
+      "name": "create_order",
+      "features": []
+    },
+    {
+      "name": "None",
+      "features": []
+    }
+  ],
+  "entities": [
+    {
+      "name": "order",
+      "children": [
+        {
+          "name": "item_name",
+          "children": [],
+          "features": [
+            {
+              "modelName": "list_itemname",
+              "isRequired": false
+            }
+          ]
+        },
+        {
+          "name": "item_flavour",
+          "children": [],
+          "features": [
+            {
+              "modelName": "list_itemflavours",
+              "isRequired": false
+            }
+          ]
+        },
+        {
+          "name": "item_quantity",
+          "children": [],
+          "features": [
+            {
+              "modelName": "number",
+              "isRequired": false
+            }
+          ]
+        },
+        {
+          "name": "item_size",
+          "children": [
+            {
+              "name": "size_value",
+              "children": [],
+              "features": [
+                {
+                  "modelName": "list_size_val",
+                  "isRequired": false
+                }
+              ]
+            },
+            {
+              "name": "size_unit",
+              "children": [],
+              "features": [
+                {
+                  "modelName": "list_size_unit",
+                  "isRequired": false
+                }
+              ]
+            }
+          ],
+          "features": []
+        }
+      ],
+      "roles": [],
+      "features": []
+    }
+  ],
+  "hierarchicals": [],
+  "composites": [],
+  "closedLists": [
+    {
+      "name": "list_itemflavours",
+      "subLists": [
+        {
+          "canonicalForm": "cheese",
+          "list": []
+        },
+        {
+          "canonicalForm": "blueberry",
+          "list": [
+            "blueberries"
+          ]
+        },
+        {
+          "canonicalForm": "strawberry",
+          "list": [
+            "strawberries"
+          ]
+        },
+        {
+          "canonicalForm": "chocolate",
+          "list": [
+            "choco"
+          ]
+        },
+        {
+          "canonicalForm": "oreo",
+          "list": []
+        },
+        {
+          "canonicalForm": "butterscotch",
+          "list": []
+        },
+        {
+          "canonicalForm": "blackforest",
+          "list": [
+            "black-forest"
+          ]
+        }
+      ],
+      "roles": []
+    },
+    {
+      "name": "list_itemname",
+      "subLists": [
+        {
+          "canonicalForm": "cake",
+          "list": [
+            "cakes",
+            "cke"
+          ]
+        },
+        {
+          "canonicalForm": "cupcake",
+          "list": [
+            "cupcakes",
+            "cup-cake",
+            "cup-cakes",
+            "cup cake",
+            "cup cakes",
+            "cup cke"
+          ]
+        },
+        {
+          "canonicalForm": "donut",
+          "list": [
+            "donuts"
+          ]
+        },
+        {
+          "canonicalForm": "pastry",
+          "list": [
+            "pastries"
+          ]
+        }
+      ],
+      "roles": []
+    },
+    {
+      "name": "list_size_unit",
+      "subLists": [
+        {
+          "canonicalForm": "kg",
+          "list": [
+            "kilogram",
+            "kgs",
+            "kil",
+            "kilograms"
+          ]
+        },
+        {
+          "canonicalForm": "pound",
+          "list": [
+            "lbs",
+            "pounds"
+          ]
+        }
+      ],
+      "roles": []
+    },
+    {
+      "name": "list_size_val",
+      "subLists": [
+        {
+          "canonicalForm": "1",
+          "list": [
+            "one"
+          ]
+        },
+        {
+          "canonicalForm": "2",
+          "list": [
+            "two"
+          ]
+        },
+        {
+          "canonicalForm": "1.5",
+          "list": [
+            "1/2"
+          ]
+        },
+        {
+          "canonicalForm": "3",
+          "list": [
+            "three"
+          ]
+        }
+      ],
+      "roles": []
+    }
+  ],
+  "prebuiltEntities": [
+    {
+      "name": "number",
+      "roles": []
+    }
+  ],
+  "utterances": [
+    {
+      "text": "1 1/2 kg vanilla cake",
+      "intent": "create_order",
+      "entities": [
+        {
+          "entity": "order",
+          "startPos": 0,
+          "endPos": 20,
+          "children": [
+            {
+              "entity": "item_name",
+              "startPos": 17,
+              "endPos": 20,
+              "children": []
+            },
+            {
+              "entity": "item_flavour",
+              "startPos": 9,
+              "endPos": 15,
+              "children": []
+            },
+            {
+              "entity": "item_size",
+              "startPos": 2,
+              "endPos": 7,
+              "children": [
+                {
+                  "entity": "size_unit",
+                  "startPos": 6,
+                  "endPos": 7,
+                  "children": []
+                },
+                {
+                  "entity": "size_value",
+                  "startPos": 2,
+                  "endPos": 4,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 0,
+              "endPos": 0,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "1 cake half kg",
+      "intent": "create_order",
+      "entities": [
+        {
+          "entity": "order",
+          "startPos": 0,
+          "endPos": 13,
+          "children": [
+            {
+              "entity": "item_size",
+              "startPos": 7,
+              "endPos": 13,
+              "children": [
+                {
+                  "entity": "size_unit",
+                  "startPos": 12,
+                  "endPos": 13,
+                  "children": []
+                },
+                {
+                  "entity": "size_value",
+                  "startPos": 7,
+                  "endPos": 10,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "entity": "item_name",
+              "startPos": 2,
+              "endPos": 5,
+              "children": []
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 0,
+              "endPos": 0,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "1 vanilla cake 1/2 kg and blueberry cupcakes",
+      "intent": "create_order",
+      "entities": [
+        {
+          "entity": "order",
+          "startPos": 0,
+          "endPos": 20,
+          "children": [
+            {
+              "entity": "item_size",
+              "startPos": 15,
+              "endPos": 20,
+              "children": [
+                {
+                  "entity": "size_unit",
+                  "startPos": 19,
+                  "endPos": 20,
+                  "children": []
+                },
+                {
+                  "entity": "size_value",
+                  "startPos": 15,
+                  "endPos": 17,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "entity": "item_name",
+              "startPos": 10,
+              "endPos": 13,
+              "children": []
+            },
+            {
+              "entity": "item_flavour",
+              "startPos": 2,
+              "endPos": 8,
+              "children": []
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 0,
+              "endPos": 0,
+              "children": []
+            }
+          ]
+        },
+        {
+          "entity": "order",
+          "startPos": 26,
+          "endPos": 43,
+          "children": [
+            {
+              "entity": "item_name",
+              "startPos": 36,
+              "endPos": 43,
+              "children": []
+            },
+            {
+              "entity": "item_flavour",
+              "startPos": 26,
+              "endPos": 34,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "2 cakes of 1.5 kg each , 4 blueberry donuts and 1 vanilla cupcake",
+      "intent": "create_order",
+      "entities": [
+        {
+          "entity": "order",
+          "startPos": 0,
+          "endPos": 16,
+          "children": [
+            {
+              "entity": "item_size",
+              "startPos": 11,
+              "endPos": 16,
+              "children": [
+                {
+                  "entity": "size_unit",
+                  "startPos": 15,
+                  "endPos": 16,
+                  "children": []
+                },
+                {
+                  "entity": "size_value",
+                  "startPos": 11,
+                  "endPos": 13,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "entity": "item_name",
+              "startPos": 2,
+              "endPos": 6,
+              "children": []
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 0,
+              "endPos": 0,
+              "children": []
+            }
+          ]
+        },
+        {
+          "entity": "order",
+          "startPos": 25,
+          "endPos": 42,
+          "children": [
+            {
+              "entity": "item_name",
+              "startPos": 37,
+              "endPos": 42,
+              "children": []
+            },
+            {
+              "entity": "item_flavour",
+              "startPos": 27,
+              "endPos": 35,
+              "children": []
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 25,
+              "endPos": 25,
+              "children": []
+            }
+          ]
+        },
+        {
+          "entity": "order",
+          "startPos": 48,
+          "endPos": 64,
+          "children": [
+            {
+              "entity": "item_name",
+              "startPos": 58,
+              "endPos": 64,
+              "children": []
+            },
+            {
+              "entity": "item_flavour",
+              "startPos": 50,
+              "endPos": 56,
+              "children": []
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 48,
+              "endPos": 48,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "2 cupcakes and 3 donuts",
+      "intent": "create_order",
+      "entities": [
+        {
+          "entity": "order",
+          "startPos": 0,
+          "endPos": 9,
+          "children": [
+            {
+              "entity": "item_name",
+              "startPos": 2,
+              "endPos": 9,
+              "children": []
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 0,
+              "endPos": 0,
+              "children": []
+            }
+          ]
+        },
+        {
+          "entity": "order",
+          "startPos": 15,
+          "endPos": 22,
+          "children": [
+            {
+              "entity": "item_name",
+              "startPos": 17,
+              "endPos": 22,
+              "children": []
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 15,
+              "endPos": 15,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "2 strawberry cupcakes",
+      "intent": "create_order",
+      "entities": [
+        {
+          "entity": "order",
+          "startPos": 0,
+          "endPos": 20,
+          "children": [
+            {
+              "entity": "item_name",
+              "startPos": 13,
+              "endPos": 20,
+              "children": []
+            },
+            {
+              "entity": "item_flavour",
+              "startPos": 2,
+              "endPos": 11,
+              "children": []
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 0,
+              "endPos": 0,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "3 cupcakes, 2 chocolate donuts and 1 cheese cake",
+      "intent": "create_order",
+      "entities": [
+        {
+          "entity": "order",
+          "startPos": 0,
+          "endPos": 9,
+          "children": [
+            {
+              "entity": "item_name",
+              "startPos": 2,
+              "endPos": 9,
+              "children": []
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 0,
+              "endPos": 0,
+              "children": []
+            }
+          ]
+        },
+        {
+          "entity": "order",
+          "startPos": 12,
+          "endPos": 29,
+          "children": [
+            {
+              "entity": "item_name",
+              "startPos": 24,
+              "endPos": 29,
+              "children": []
+            },
+            {
+              "entity": "item_flavour",
+              "startPos": 14,
+              "endPos": 22,
+              "children": []
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 12,
+              "endPos": 12,
+              "children": []
+            }
+          ]
+        },
+        {
+          "entity": "order",
+          "startPos": 35,
+          "endPos": 47,
+          "children": [
+            {
+              "entity": "item_name",
+              "startPos": 44,
+              "endPos": 47,
+              "children": []
+            },
+            {
+              "entity": "item_flavour",
+              "startPos": 37,
+              "endPos": 42,
+              "children": []
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 35,
+              "endPos": 35,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "i would like to place an order for 2 vanilla cake half kg",
+      "intent": "create_order",
+      "entities": [
+        {
+          "entity": "order",
+          "startPos": 35,
+          "endPos": 56,
+          "children": [
+            {
+              "entity": "item_size",
+              "startPos": 50,
+              "endPos": 56,
+              "children": [
+                {
+                  "entity": "size_unit",
+                  "startPos": 55,
+                  "endPos": 56,
+                  "children": []
+                },
+                {
+                  "entity": "size_value",
+                  "startPos": 50,
+                  "endPos": 53,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "entity": "item_name",
+              "startPos": 45,
+              "endPos": 48,
+              "children": []
+            },
+            {
+              "entity": "item_flavour",
+              "startPos": 37,
+              "endPos": 43,
+              "children": []
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 35,
+              "endPos": 35,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "please take my order of 1 chocolate cake and 3 strawberry cupcakes",
+      "intent": "create_order",
+      "entities": [
+        {
+          "entity": "order",
+          "startPos": 15,
+          "endPos": 39,
+          "children": [
+            {
+              "entity": "item_name",
+              "startPos": 36,
+              "endPos": 39,
+              "children": []
+            },
+            {
+              "entity": "item_flavour",
+              "startPos": 26,
+              "endPos": 34,
+              "children": []
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 24,
+              "endPos": 24,
+              "children": []
+            }
+          ]
+        },
+        {
+          "entity": "order",
+          "startPos": 45,
+          "endPos": 65,
+          "children": [
+            {
+              "entity": "item_name",
+              "startPos": 58,
+              "endPos": 65,
+              "children": []
+            },
+            {
+              "entity": "item_flavour",
+              "startPos": 47,
+              "endPos": 56,
+              "children": []
+            },
+            {
+              "entity": "item_quantity",
+              "startPos": 45,
+              "endPos": 45,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "versionId": "0.1",
+  "name": "ordersApp",
+  "desc": "",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "phraselists": [
+    {
+      "name": "lstItemname",
+      "mode": true,
+      "words": "cake,cupcakes,cupcake,donut,donuts,cup cake,cup-cake,cup-cakes,cup cakes,pastries,pastry",
+      "activated": true,
+      "enabledForAllModels": false
+    }
+  ],
+  "regex_features": [],
+  "patterns": [],
+  "settings": []
+}

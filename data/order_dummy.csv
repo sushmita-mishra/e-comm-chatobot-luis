@@ -1,0 +1,8 @@
+user_id,order_id,creation_date,order_status,order_description
+1,2,03-03-2021,Delivered,1 cake
+,,,,3 cupcakes
+BS3VF0Q,ord8128,05-01-2022,Order Received,3 vanilla cupcakes
+H0F4HTI,ord3036,2022-01-11,Order Received,1 cheese cake half kg
+H0F4HTI,ord3036,2022-01-11,Order Received,2 chocolate cupcakes
+5T2N5BH,ord7530,2022-01-11,Cancelled,1 cheese cake half kg
+5T2N5BH,ord7530,2022-01-11,Cancelled,2 chocolate cupcakes

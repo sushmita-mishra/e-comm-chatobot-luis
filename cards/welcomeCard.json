@@ -1,0 +1,63 @@
+{
+
+    "type": "AdaptiveCard",
+  
+    "body": [
+  
+      {
+  
+        "type": "TextBlock",
+  
+        "size": "ExtraLarge",
+  
+        "weight": "Bolder",
+  
+        "text": "CreamyAffairs Bot",
+  
+        "horizontalAlignment": "Center",
+  
+        "color": "Dark"
+  
+      },
+  
+      {
+  
+        "type": "Image",
+  
+        "url": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Ym90fGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80",
+  
+        "altText": "Bot Image"
+  
+      },
+  
+      {
+  
+        "type": "TextBlock",
+  
+        "text": "This Bot will allow you to Create, View, Delete Orders.",
+  
+        "wrap": true
+  
+      }
+  
+    ],
+  
+    "actions": [
+  
+      {
+  
+        "type": "Action.OpenUrl",
+  
+        "title": "Creamy affairs By Shubhangi",
+  
+        "url": "https://creamy-affairs-by-shubhangi.business.site/"
+  
+      }
+  
+    ],
+  
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  
+    "version": "1.1"
+  
+  }
