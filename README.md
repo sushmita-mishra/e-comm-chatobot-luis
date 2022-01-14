@@ -14,4 +14,4 @@
 #### Order entity is ML structured entity. It is the main entity which we will be using in our project to map the order details.
 #### In the LUIS app go to the Manage Tab and select Authorization Resource. 
 #### On Authorization Resource screen you will find the URL.
-#### Copy the URL, trim the last part of the URL i.e. "YOR_QUERY_HERE". paste the URL in Config file attribute LUIS_URL
+#### Copy the URL, trim the last part of the URL i.e. "YOR_QUERY_HERE". paste the URL in Config file attribute LUIS_APP_URL
